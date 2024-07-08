@@ -10,8 +10,9 @@ class AnalysisOptionsSample extends Sample {
 
   @override
   String get content => '''$include
-linter:
+
+linter: 
   rules:
-    
+    no_leading_underscores_for_local_identifiers: false
 ''';
 }
