@@ -8,10 +8,14 @@ class GetViewSample extends Sample {
   final String _controller;
   final bool _isServer;
 
-  GetViewSample(String path, this._viewName, this._controller,
-      this._controllerDir, this._isServer,
-      {bool overwrite = false})
-      : super(path, overwrite: overwrite);
+  GetViewSample(
+    super.path,
+    this._viewName,
+    this._controller,
+    this._controllerDir,
+    this._isServer, {
+    super.overwrite,
+  });
 
   String get import => _controllerDir.isNotEmpty
       ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';'''
@@ -25,7 +29,7 @@ import 'package:get/get.dart';
 $import
 
 class $_viewName extends $_controllerName {
- const $_viewName({Key? key}) : super(key: key);
+ const $_viewName({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

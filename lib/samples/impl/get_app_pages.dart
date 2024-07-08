@@ -4,9 +4,10 @@ import '../interface/sample_interface.dart';
 /// [Sample] file from [app_pages] file creation.
 class AppPagesSample extends Sample {
   String initial;
-  AppPagesSample(
-      {String path = 'lib/app/routes/app_pages.dart', this.initial = 'HOME'})
-      : super(path);
+  AppPagesSample({
+    String path = 'lib/app/routes/app_pages.dart',
+    this.initial = 'HOME',
+  }) : super(path);
   final import = PubspecUtils.getPackageImport;
   String get _initialRoute =>
       initial.isNotEmpty ? '\nstatic const INITIAL = Routes.$initial;' : '';

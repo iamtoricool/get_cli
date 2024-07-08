@@ -4,9 +4,12 @@ class GenerateLocalesSample extends Sample {
   final String _translationsKeys;
   final String _keys;
   final String _locales;
-  GenerateLocalesSample(this._keys, this._locales, this._translationsKeys,
-      {String path = 'lib/generated/locales.g.dart'})
-      : super(path, overwrite: true);
+  GenerateLocalesSample(
+    this._keys,
+    this._locales,
+    this._translationsKeys, {
+    String path = 'lib/generated/locales.g.dart',
+  }) : super(path, overwrite: true);
 
   @override
   String get content => '''
