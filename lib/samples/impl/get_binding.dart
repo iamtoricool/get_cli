@@ -10,14 +10,9 @@ class BindingSample extends Sample {
   final String _bindingName;
   final bool _isServer;
 
-  BindingSample(
-    super.path,
-    this._fileName,
-    this._bindingName,
-    this._controllerDir,
-    this._isServer, {
-    super.overwrite,
-  });
+  BindingSample(super.path, this._fileName, this._bindingName,
+      this._controllerDir, this._isServer,
+      {super.overwrite});
 
   String get _import => _isServer
       ? "import 'package:get_server/get_server.dart';"
